@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    
+
+</head>
+<body>
+
+    <div class="w3-container">
+
+        <div class="w3-bar w3-yellow">
+            <a href="info1" class="w3-bar-item w3-button">
+                <a href="@Url.Action("Index", "info1")" title="Company Logo">
+                    <img src="http://gisbiz.com/wp-content/uploads/2013/12/GISbiz-logo-314x116-300x110.png" width="150" height="100" alt="" />
+
+                </a>
+
+                <center><p style="font-size:x-large"> WORKERS DETAILS</p></center>
+            </a>
+
+        </div>
+
+
+    </div>
+   
+    
+</body>
+    <div class="container body-content">
+    @RenderBody()
+    <hr />
+    <footer>
+       
+        <p>&copy; @DateTime.Now.Year - Employee Details</p>
+
+    </footer>
+    </div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+
+
+</html>
+

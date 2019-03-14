@@ -1,0 +1,97 @@
+﻿@model IEnumerable<information.Models.info>
+
+<div class="header">
+
+
+    <i class="fa fa-home" title="Home Page" style="font-size:24px;">  </i>
+    <a href="info1\Create" class="glyphicon glyphicon-pencil" title="Create New">
+        <i class="icon-pencil icon-white"></i>
+
+    </a>
+
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        <th>
+            @Html.DisplayNameFor(model => model.Place)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Designation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bankname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccountNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+        <td>
+            <a href="info1\Detail1\@item.Id">
+                @Html.DisplayFor(modelItem => item.Name)
+            </a>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Place)
+        </td>
+        <td>
+            @Html.DisplayFor(ModelItem => item.Designation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bankname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccountNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+
+
+        <td>
+            <a href="info1\Edit\@item.Id" class="glyphicon glyphicon-pencil" title="Edit">
+                <i class="icon-pencil icon-white"></i>
+            </a>|
+            <a href="info1\Delete\@item.Id" class="glyphicon glyphicon-trash" title="Delete" onclick="window.alert('Are You sure want to delete this')">
+                <i class="icon-pencil icon-white"></i>
+
+            </a>
+
+
+
+        </td>
+    </tr>
+    }
+
+
+</table>
